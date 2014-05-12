@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Engine</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcome">Willkommen in der Engine!</string>
+    <string name="easy">Leicht</string>
+    <string name="mid">Mittel</string>
+    <string name="hard">Schwer</string>
+    <string name="close">Beenden</string>
+    <string name="testingInfo">Es handelt sich hierbei jediglich um einen Test</string>
+
+</resources>
