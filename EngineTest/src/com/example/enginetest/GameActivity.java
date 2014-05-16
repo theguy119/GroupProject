@@ -21,4 +21,18 @@ public class GameActivity extends View {      			// Hier wird das eigentliche Sp
 		
 	}
 
+	
+	public void startWithSelectedDifficulty(){				//Noch keine Ahnung ob das hier die beste Lösung ist, oder ob wir die Schwierigkeit irgendwie als Parameter übergeben
+															// es geht halt darum hier die Variabe Difficulty aus ActivityMain zu holen und anzuwenden!
+															//BreakPointReminder für mich! Hier bin ich stehen geblieben!
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
 }

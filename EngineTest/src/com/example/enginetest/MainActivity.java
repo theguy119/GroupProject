@@ -75,6 +75,14 @@ public class MainActivity extends ActionBarActivity {
 		
 	}
 	
+	
+	public int getDifficulty(){
+		
+		
+		return difficulty;
+		
+	}
+	
 	public void closeApp(View view){
 		
 		AlertDialog.Builder ad = new AlertDialog.Builder(this); // Öffnet Dialog, der dich fragt ob du wirklich beenden willst
@@ -87,7 +95,7 @@ public class MainActivity extends ActionBarActivity {
 			ad
 					.setMessage("Drücke OK um die App zu beenden")
 					.setCancelable(false)
-					.setPositiveButton("JA!",new DialogInterface.OnClickListener() {
+					.setPositiveButton("OK!",new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog,int id) {
 							// schließt App wenn gedrückt
 							
