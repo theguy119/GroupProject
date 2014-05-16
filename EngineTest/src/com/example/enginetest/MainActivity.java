@@ -74,30 +74,60 @@ public class MainActivity extends ActionBarActivity {
 		setContentView(new GameActivity(this));
 		
 	}
-	@SuppressWarnings("deprecation")
+	
 	public void closeApp(View view){
 		
-		AlertDialog ad = new AlertDialog.Builder(this).create(); // Öffnet Dialog, der dich fragt ob du wirklich beenden willst
-		ad.setTitle("App wirklich schließen?");
-		ad.setButton("OK", new DialogInterface.OnClickListener() {        //Bestätigung via OnClickListener
-																			//Hier gibt es noch Probleme, funktion veraltet? Wird nicht angezeigt!
-			@Override
-			public void onClick(final DialogInterface dialog, final int which) {
-				MainActivity.this.finish();
-				
-			}
-		});
+		AlertDialog.Builder ad = new AlertDialog.Builder(this); // Öffnet Dialog, der dich fragt ob du wirklich beenden willst
 		
-		ad.setButton2("Nein!",new DialogInterface.OnClickListener() {  //gleiches Problem
+			ad.setTitle("Noch nix...");
+
+				
+				
 			
-			@Override
-			public void onClick(DialogInterface dialog, int which) {
-				Toast.makeText(getApplicationContext(), "App wird fortgesetzt!", Toast.LENGTH_LONG).show();
-				
-			};
-		});
+			ad
+					.setMessage("Drücke OK um die App zu beenden")
+					.setCancelable(false)
+					.setPositiveButton("JA!",new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog,int id) {
+							// schließt App wenn gedrückt
+							
+						
+							
+							MainActivity.this.finish();
+						}
+					  })
+					  
+					  
+					  
+					.setNegativeButton("NEIN!",new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog,int id) {
+							//App läuft weiter, Dialog wird geschlossen
+							
+							dialog.cancel();
+						}
+					});
+
+	
+					AlertDialog alertDialog = ad.create();			// AlertDialog wird erstellt
+
+					
+					alertDialog.show();  // Alert Dialog wird angezeigt
+				}
+			
 		
-	}
+		
+		
+	
+
+	
+	
+	
+	
+
+		
+	
+	
+	
 	
 	public static class PlaceholderFragment extends Fragment {
 
@@ -114,3 +144,4 @@ public class MainActivity extends ActionBarActivity {
 	}
 
 }
+	
