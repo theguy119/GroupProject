@@ -59,7 +59,8 @@ public class MainActivity extends ActionBarActivity {
 	public void easyPressed (View view){
 		
 		difficulty = 1;									//je nach Schwierigkeit soll andere Activity geöffnet werden mit anderen Parametern(quasi leicht und mittel sind 2 verschieden games)
-		setContentView(new GameActivity(this));
+		setContentView(new GameActivity(this));			//für unser Projekt erstmal uninteressant, weil nur eine Schwierigkeit die mit vorranschreitender Spieldauer zunimmt!
+		
 		
 	}
 	public void midPressed(View view){

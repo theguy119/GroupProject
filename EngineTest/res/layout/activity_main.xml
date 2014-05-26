@@ -18,13 +18,14 @@
 
     <Button
         android:id="@+id/button1"
+        style="@id/button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp"
-        android:text="@string/easy"
-        android:onClick="easyPressed" />
+        android:onClick="easyPressed"
+        android:text="@string/easy" />
 
     <Button
         android:id="@+id/button2"
