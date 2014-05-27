@@ -3,60 +3,38 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context="com.example.engine.MainActivity"
     tools:ignore="MergeRootFrame" >
 
-    <TextView													
-        android:id="@+id/textView1"
+    <Button
+        android:id="@+id/button_default"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="94dp"
-        android:text="@string/welcome"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <Button
-        android:id="@+id/button1"
-        style="@id/button1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"
-        android:onClick="easyPressed"
-        android:text="@string/easy" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/button1"
-        android:layout_centerVertical="true"
-        android:text="@string/mid"
-        android:onClick="midPressed" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignRight="@+id/button2"
-        android:layout_below="@+id/button2"
-        android:layout_marginTop="24dp"
-        android:text="@string/hard"
-        android:onClick="hardPressed" />
+        android:layout_alignRight="@+id/button4"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/button_start_custom"
+        android:onClick="easyPressed" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button3"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/button3"
-        android:layout_marginBottom="32dp"
-        android:text="@string/close" 
-        android:onClick="closeApp"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="124dp"
+        android:background="@drawable/button_exit_custom"
+        android:onClick="closeApp" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_default"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="57dp"
+        android:background="@drawable/button_custom_options" />
 
 </RelativeLayout>
 
