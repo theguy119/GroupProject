@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -73,6 +74,14 @@ public class MainActivity extends ActionBarActivity {
 		
 		difficulty = 3;
 		setContentView(new GameActivity(this));
+		
+	}
+	
+	public void OptionsPressed(View view){
+		
+		Intent i = new Intent(MainActivity.this, OptionsActivity.class);
+        startActivity(i);
+		
 		
 	}
 	
