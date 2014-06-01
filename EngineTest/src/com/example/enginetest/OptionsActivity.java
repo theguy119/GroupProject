@@ -19,7 +19,7 @@ public class OptionsActivity extends MainActivity {
 	
 	
 	
-	private int volume = 4;
+	private int volume = 3;
 	
 	
 	@Override
@@ -43,8 +43,9 @@ public void setSoundVolumePlus(View v){
 	
 	
 	 
+	
+	this.volume++;
 	checkVolumeNumber();
-	this.volume = volume + 1;
 	      }
 
 
@@ -52,33 +53,29 @@ public void setSoundVolumePlus(View v){
 
 public void setSoundVolumeMinus(View v){
 	
-	checkVolumeNumber();
+
 	
 	if(volume >=0)
 	{
-	this.volume = volume-1;
+	this.volume--;
 	}
 	if(volume <1)
 	{
 		this.volume = 1;
 	}
 	 
+	checkVolumeNumber();
 	      }
 	
 public void checkVolumeNumber(){
 	
-	if(volume == 0)
-	{
-		b_number = (Button) findViewById(R.id.button_volume_number);
-		b_number.setBackgroundDrawable(getResources().getDrawable(R.drawable.no1));
-		
-	}
 	
 	if(volume == 1)
 	{
 		
 		b_number = (Button) findViewById(R.id.button_volume_number);
-		b_number.setBackgroundDrawable(getResources().getDrawable(R.drawable.no2));
+		b_number.setBackgroundDrawable(getResources().getDrawable(R.drawable.no1));
+		
 		
 	}
 	
@@ -86,37 +83,52 @@ public void checkVolumeNumber(){
 	{
 		
 		b_number = (Button) findViewById(R.id.button_volume_number);
-		b_number.setBackgroundDrawable(getResources().getDrawable(R.drawable.no3));
+		b_number.setBackgroundDrawable(getResources().getDrawable(R.drawable.no2));
 		
 	}
 	if(volume == 3)
 	{
 		
 		b_number = (Button) findViewById(R.id.button_volume_number);
-		b_number.setBackgroundDrawable(getResources().getDrawable(R.drawable.no4));
+		b_number.setBackgroundDrawable(getResources().getDrawable(R.drawable.no3));
 		
 	}
 	if(volume == 4)
 	{
 		
 		b_number = (Button) findViewById(R.id.button_volume_number);
-		b_number.setBackgroundDrawable(getResources().getDrawable(R.drawable.no5));
+		b_number.setBackgroundDrawable(getResources().getDrawable(R.drawable.no4));
 		
 	}
 	if(volume == 5)
 	{
 		
 		b_number = (Button) findViewById(R.id.button_volume_number);
-		b_number.setBackgroundDrawable(getResources().getDrawable(R.drawable.no1));
+		b_number.setBackgroundDrawable(getResources().getDrawable(R.drawable.no5));
 		
 		
 	}
 	if(volume >= 5)
 	{
 		
-		this.volume = 0;
+		SoundOutOfVolumeNumber();
+		
+	}
+}
+	
+	
+	public void SoundOutOfVolumeNumber()
+	{
+		
+		if(volume >5)
+		{
+			
+			this.volume = 1;
+			checkVolumeNumber();
+			
+		}
 	}
 	
-}
+
 
 }
